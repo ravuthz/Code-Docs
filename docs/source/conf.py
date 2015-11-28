@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'My Codeignitor Cms'
+project = 'CodeCMS'
 copyright = '2015, Ravuth Yo'
 author = 'Ravuth Yo'
 

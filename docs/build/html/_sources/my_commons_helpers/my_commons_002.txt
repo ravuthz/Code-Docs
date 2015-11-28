@@ -1,0 +1,55 @@
+Print Functions
+===============
+
+pp($item)
+---------
+    * $item : Object to print with the readable format with html5 tags, colored style and a little bit event.
+
+    ::
+
+     Example: $array = array('key'=>'value');
+              pp($array);
+
+dd ($item)
+----------
+    * $item : Object to print with the readable format with html5 tags, colored style and a little bit event and then terminate the process with die().
+
+    ::
+
+     Example: $array = array('key'=>'value');
+              dd($array);
+
+page_metas($items, $default = '')
+---------------------------------
+    * $item : Array with the keys and values of the html meta attributes.
+    * $default: Default value if the first parameter is empty or null.
+
+    ::
+
+     Example: page_metas(array('author'=> 'MAO BUNTHON'));
+
+page_styles($items, $path = 'public/css')
+-----------------------------------------
+    * $items : String or Array of the stylesheets which to print with echo().
+    * $path: Default path of the stylesheets in the application folder.
+
+    ::
+
+     Example:
+        page_styles([
+           '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css',
+           'main.js'
+        ]);
+
+page_script($items, $path = 'public/js')
+----------------------------------------
+    * $items : String or Array of the javascripts which to print with echo().
+    * $path: Default path of the javascripts in the application folder.
+
+    ::
+
+     Example:
+        page_scripts([
+           '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js',
+           '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'
+        ]);

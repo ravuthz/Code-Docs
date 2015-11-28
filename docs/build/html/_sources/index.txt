@@ -9,6 +9,8 @@ Welcome to My Codeignitor Cms's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 2
 
-   command
+    my_commons_helpers/index
+
+    my_command_line

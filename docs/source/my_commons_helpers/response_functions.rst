@@ -1,0 +1,7 @@
+Response Funcitons
+==================
+
+response_json($data)
+--------------------
+    * $data : Object or Array to cast to json object.
+    * print the json object and terminate the code.

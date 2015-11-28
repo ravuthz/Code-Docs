@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>My Commons Helper &mdash; My Codeignitor Cms 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="My Codeignitor Cms 1.0.0 documentation" href="../index.html"/>
+        <link rel="next" title="Print Functions" href="my_commons_002.html"/>
+        <link rel="prev" title="Welcome to My Codeignitor Cms’s documentation!" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> My Codeignitor Cms
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">My Commons Helper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#config-filename-item">config($filename, $item = &#8216;&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-init-filename">object_init($filename)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#include-file-filename">include_file($filename)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pp-item">pp($item)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dd-item">dd ($item)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#page-metas-items-default">page_metas($items, $default = &#8216;&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#page-styles-items-path-public-css">page_styles($items, $path = &#8216;public/css&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#page-script-items-path-public-js">page_script($items, $path = &#8216;public/js&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-input-null-method-post">request($input = null, $method = &#8216;post&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-is-post">request_is_post()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-is-get">request_is_get()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#response-json-data">response_json($data)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-session-name-value">set_session($name, $value)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-session-name">get_session($name)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-session-name-null">delete_session($name = null)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-session">list_session()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flash-name-value-null">flash($name, $value = null)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#redirect-flash-to-message">redirect_flash($to, $message = &#8216;&#8217;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#encode-password-password-salt-null">encode_password($password, $salt = null)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decode-password-passcode-salt-null">decode_password($passcode, $salt = null)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_002.html">Print Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_003.html">Request Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_004.html">Response Funcitons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_005.html">Security Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_006.html">Session Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../my_command_line.html">Command Line Interface</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">My Codeignitor Cms</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>My Commons Helper</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/my_commons_helpers/my_commons_001.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="my-commons-helper">
+<h1>My Commons Helper<a class="headerlink" href="#my-commons-helper" title="Permalink to this headline">¶</a></h1>
+<p>This is the common helper function include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Printing functions, (page_metas, page_styles, page_scripts …)</li>
+<li>Request functions, (request, request_is_post, request_is_get …)</li>
+<li>Response functions,(response_json)</li>
+<li>Session functions, (set_session, get_session, flash…)</li>
+<li>Security functions, (encode_password, decode_password …)</li>
+</ul>
+</div></blockquote>
+<div class="section" id="config-filename-item">
+<h2>config($filename, $item = &#8216;&#8217;)<a class="headerlink" href="#config-filename-item" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$filename : File name in the config folder with extension</li>
+<li>$item : Name of the object to fetch that seperate by (.) dot sign</li>
+<li>return array of the data.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $db = config(&#39;database&#39;, &#39;db.default&#39;)
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="object-init-filename">
+<h2>object_init($filename)<a class="headerlink" href="#object-init-filename" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$filename : Name of the file with full path in the application folder that we need to include and create the object.</li>
+<li>return the instance of that file.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $model = object_init(&#39;models/Users&#39;);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="include-file-filename">
+<h2>include_file($filename)<a class="headerlink" href="#include-file-filename" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$filename : Name of the file with full path in the application folder that we want to include only.</li>
+<li>return the file content.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $test = include_file(&#39;test&#39;)
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pp-item">
+<h2>pp($item)<a class="headerlink" href="#pp-item" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$item : Object to print with the readable format with html5 tags, colored style and a little bit event.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $array = array(&#39;key&#39;=&gt;&#39;value&#39;);
+         pp($array);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="dd-item">
+<h2>dd ($item)<a class="headerlink" href="#dd-item" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$item : Object to print with the readable format with html5 tags, colored style and a little bit event and then terminate the process with die().</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $array = array(&#39;key&#39;=&gt;&#39;value&#39;);
+         dd($array);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="page-metas-items-default">
+<h2>page_metas($items, $default = &#8216;&#8217;)<a class="headerlink" href="#page-metas-items-default" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$item : Array with the keys and values of the html meta attributes.</li>
+<li>$default: Default value if the first parameter is empty or null.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: page_metas(array(&#39;author&#39;=&gt; &#39;MAO BUNTHON&#39;));
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="page-styles-items-path-public-css">
+<h2>page_styles($items, $path = &#8216;public/css&#8217;)<a class="headerlink" href="#page-styles-items-path-public-css" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$items : String or Array of the stylesheets which to print with echo().</li>
+<li>$path: Default path of the stylesheets in the application folder.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example:
+   page_styles([
+      &#39;//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css&#39;,
+      &#39;main.js&#39;
+   ]);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="page-script-items-path-public-js">
+<h2>page_script($items, $path = &#8216;public/js&#8217;)<a class="headerlink" href="#page-script-items-path-public-js" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$items : String or Array of the javascripts which to print with echo().</li>
+<li>$path: Default path of the javascripts in the application folder.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example:
+   page_scripts([
+      &#39;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&#39;,
+      &#39;//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js&#39;
+   ]);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="request-input-null-method-post">
+<h2>request($input = null, $method = &#8216;post&#8217;)<a class="headerlink" href="#request-input-null-method-post" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$input : Name of the request from client, can be Array or String to fetch.</li>
+<li>$method : The method name of the request, default is POST.</li>
+<li>return fetched object</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>Example: $array = request(&#39;firstname&#39;, &#39;lastname&#39;);
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="request-is-post">
+<h2>request_is_post()<a class="headerlink" href="#request-is-post" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>return true if the request method is POST otherwise false.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="request-is-get">
+<h2>request_is_get()<a class="headerlink" href="#request-is-get" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>return true if the request method is GET otherwise false.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="response-json-data">
+<h2>response_json($data)<a class="headerlink" href="#response-json-data" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$data : Object or Array to cast to json object.</li>
+<li>print the json object and terminate the code.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-session-name-value">
+<h2>set_session($name, $value)<a class="headerlink" href="#set-session-name-value" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$name : Name of the session to set.</li>
+<li>$value : Value of the session to set.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="get-session-name">
+<h2>get_session($name)<a class="headerlink" href="#get-session-name" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$name : Name of the session to fetch.</li>
+<li>return the session object.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="delete-session-name-null">
+<h2>delete_session($name = null)<a class="headerlink" href="#delete-session-name-null" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>$name : Name of the session to delete, if name is empty or null this will destroy all</li>
+</ul>
+</div></blockquote>
+<p>the session object.</p>
+</div></blockquote>
+</div>
+<div class="section" id="list-session">
+<h2>list_session()<a class="headerlink" href="#list-session" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>return the session array.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="flash-name-value-null">
+<h2>flash($name, $value = null)<a class="headerlink" href="#flash-name-value-null" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$name : Name of the session to set or get when $value null or not.</li>
+<li>$value : of the session to set</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="redirect-flash-to-message">
+<h2>redirect_flash($to, $message = &#8216;&#8217;)<a class="headerlink" href="#redirect-flash-to-message" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$to : Path to redirect</li>
+<li>$message : Session object send before redirect by flash().</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="encode-password-password-salt-null">
+<h2>encode_password($password, $salt = null)<a class="headerlink" href="#encode-password-password-salt-null" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$password : Password or any secure text to encrypt</li>
+<li>$salt : Character to combine with password to encrypt or decrypt, when $salt is empty or null this will get the encryption=key from the default config.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="decode-password-passcode-salt-null">
+<h2>decode_password($passcode, $salt = null)<a class="headerlink" href="#decode-password-passcode-salt-null" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>$passcode : Encrypted password to decrypt.</li>
+<li>$salt : Character to combine with password to encrypt or decrypt, when $salt is empty or null this will get the encryption_key from the default config.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="my_commons_002.html" class="btn btn-neutral float-right" title="Print Functions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to My Codeignitor Cms’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Ravuth Yo.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

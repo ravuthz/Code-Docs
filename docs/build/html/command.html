@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Command &mdash; My Codeignitor Cms 1.0.0 documentation</title>
+  <title>Command Line &mdash; My Codeignitor Cms 1.0.0 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="My Codeignitor Cms 1.0.0 documentation" href="index.html"/>
-        <link rel="prev" title="Welcome to My Codeignitor Cms’s documentation!" href="index.html"/> 
+        <link rel="prev" title="My Commons Helper" href="my_commons_helper.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -81,7 +81,13 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_helper.html">My Commons Helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_commons_helper.html#functions-and-usage">Functions and Usage:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#make-command">Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-command">Data Command</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -112,7 +118,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Command</li>
+    <li>Command Line</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -126,66 +132,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="command">
-<h1>Command<a class="headerlink" href="#command" title="Permalink to this headline">¶</a></h1>
-<p>First we open the terminal and then go to the project root</p>
-<p>Command: php index.php command controller method parameter</p>
-<ul class="simple">
-<li>Make Command:</li>
-</ul>
+  <div class="section" id="command-line">
+<h1>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h1>
+<p>First we open the terminal and then go to the project root,
+Command: php index.php command controller method parameter</p>
+<div class="section" id="make-command">
+<h2>Make Command<a class="headerlink" href="#make-command" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul>
-<li><dl class="first docutils">
-<dt>php index.php command make c (name) <span class="classifier-delimiter">:</span> <span class="classifier">Use to create controller.</span></dt>
-<dd><ul class="first last simple">
-<li>Example: php index.php command make c test</li>
-<li>Result=&gt; apllication/controllers/Test.php</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>php index.php command make m (name) <span class="classifier-delimiter">:</span> <span class="classifier">Use to create model</span></dt>
-<dd><ul class="first last simple">
-<li>Example: php index.php command make m test</li>
-<li>Result=&gt; apllication/models/Test.php</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>php index.php command make v (name) <span class="classifier-delimiter">:</span> <span class="classifier">Use to create model</span></dt>
-<dd><ul class="first last simple">
-<li>Example: php index.php command make v test</li>
-<li>Result=&gt; apllication/views/Test.php</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>php index.php command make mvc (name) <span class="classifier-delimiter">:</span> <span class="classifier">Combind 3 about</span></dt>
-<dd><ul class="first last">
-<li><p class="first">Example: php index.php command make mvc test</p>
-</li>
-<li><dl class="first docutils">
-<dt>Result=&gt; apllication/controllers/Test.php</dt>
-<dd><p class="first last">apllication/models/Test.php
-apllication/views/Test.php</p>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
+<div><ul class="simple">
+<li>php index.php command make c (name)  : Use to create controller.</li>
 </ul>
 </div></blockquote>
-<ul class="simple">
-<li>Data Command:
-- php index.php command data migrate  : Run migrate (Create Order Tables)
-- php index.php command data rollback : Run rollback (Delete Reverse Tables)
-- php index.php command data refresh  : Rollback then Migrate</li>
+<div class="highlight-python"><div class="highlight"><pre>Example: php index.php command make c test
+Result=&gt; apllication/controllers/Test.php
+
+- php index.php command make m (name)  : Use to create model
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">Example: php index.php command make m test
+Result=&gt; apllication/models/Test.php</p>
+<ul class="last simple">
+<li>php index.php command make v (name)  : Use to create model</li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre>Example: php index.php command make v test
+Result=&gt; apllication/views/Test.php
+
+- php index.php command make mvc (name)  : Combind 3 about
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">Example: php index.php command make mvc test
+Result=&gt; apllication/controllers/Test.php</p>
+<blockquote class="last">
+<div>apllication/models/Test.php
+apllication/views/Test.php</div></blockquote>
+</dd>
+</dl>
+</div>
+<div class="section" id="data-command">
+<h2>Data Command<a class="headerlink" href="#data-command" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>php index.php command data migrate  : Run migrate (Create Order Tables)</li>
+<li>php index.php command data rollback : Run rollback (Delete Reverse Tables)</li>
+<li>php index.php command data refresh  : Rollback then Migrate</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -196,7 +194,7 @@ apllication/views/Test.php</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to My Codeignitor Cms’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="my_commons_helper.html" class="btn btn-neutral" title="My Commons Helper" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

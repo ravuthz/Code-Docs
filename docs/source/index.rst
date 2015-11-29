@@ -7,3 +7,10 @@ Welcome to My Code Cms's documentation!
 =======================================
 
 I just create this repository or readthedocs site for my custome Codeignitor project only not for Codeignitor
+
+.. toctree::
+    :maxdepth: 2
+
+    my_commons_helpers/index
+
+    my_command_line
